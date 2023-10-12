@@ -33,33 +33,33 @@ public class TpApiRestspApplication {
 		return args -> {
 			for(int i = 0; i<=20; i++){
 				Localidad localidad  = Localidad.builder()
-						.denominacion("LocalidadDePrueba")
+						.denominacion("San martin")
 						.build();
 				localidadRepository.save(localidad);
 				Domicilio domicilio = Domicilio.builder()
-						.calle("CalleDePrueba")
-						.numero(31312)
+						.calle("san luis")
+						.numero(786767)
 						.localidad(localidad)
 						.build();
 				domicilioRepository.save(domicilio);
 				Persona persona = Persona.builder()
-						.nombre("Theo")
-						.apellido("Pelegrina")
+						.nombre("Luciano")
+						.apellido("Aguilera")
 						.domicilio(domicilio)
-						.dni(342432)
+						.dni(533353535)
 						.build();
 				personaRepository.save(persona);
 				Libro libro = Libro.builder()
 						.fecha(23)
 						.genero("Genero: "+ 1)
-						.titulo("TituloLibro")
+						.titulo("el ojo")
 						.paginas(2)
 						.build();
 				libroRepository.save(libro);
 				Autor autor = Autor.builder()
-						.nombre("NombreAutor")
-						.apellido("ApellidoAutor")
-						.biografia("DescripcionAutor")
+						.nombre("nr")
+						.apellido("junior")
+						.biografia("bio de nr junior")
 						.build();
 				autorRepository.save(autor);
 			}
